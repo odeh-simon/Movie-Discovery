@@ -5,9 +5,384 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+ height: 70vh;/* Adjust the height as needed */
+  background-image: url('https://image.tmdb.org/t/p/w200//3bhkrj58Vtu7enYsRolD1fZdja1.jpg'); /* Replace {posterPath} with the actual URL */
+  background-size: cover;
+  background-position: center center;
+  background-repeat:no-repeat;
+  margin-bottom: 5%;
+
+}
+
+#featured{
+  text-align: center;
+  margin-bottom: 3%;
+
+}
+
+/* Footer Styles */
+.footer-container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.social-media-icons {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+
+
+.hero-details {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  width: 25%;
+}
+
+.hero-details h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-details p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.hero-details a {
+  color: white;
+  text-decoration: none;
+}
+
+.watch-trailer-button {
+  display: inline-block;
+  background-color: red; /* Adjust button background color as needed */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  top: 80%;
+  left: 5%; /* Adjust left positioning as needed */
+  transform: translateY(-50%);
+  border: 1px ;
+  border-radius: 15%;
+}
+
+#search-box{
+  width: 100%;
+  padding: 10px;
+  
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 100px; /* Adjust the logo size as needed */
+}
+
+.search-bar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  right: 0%;
+  transform: translateX(-50%);
+  border: 0px; 
+
+}
+
+
+/* Style the container for featured movies */
+.featured-movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Five movies per row */
+  justify-content: center; /* Center the grid horizontally */
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: transform 0.2s ease;
+}
+
+/* Adjust the styling for individual movie cards as needed */
+.movie-card {
+  text-align:left;
+  padding:2px 0;/* Add some padding around each card for spacing */
+  width: 100%; /* Adjust the width as needed */
+  transition: transform 0.2s ease; /* Smooth zoom transition */
+  
+}
+
+.movie-card :hover {
+  transform: scale(1.02); 
+}
+/* Target only the movie titles within .movie-card */
+.movie-card h2 {
+  font-size: 16px; /* Adjust the font size to your preference */
+}
+
+/******************************************************* MovieDetails container**************************************************/
+.movie-details-container {
+  display: flex;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 5;
+
+  
+  
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.sidebar a {
+  /* Basic link styles */
+  text-decoration: none;
+  color: #333;
+  margin: 10px 0; /* Space the links neatly from each other */
+
+  /* Center the text within the link */
+  display: flex;
+  align-items: center;
+}
+
+li:hover a {
+  transform: scale(1.05); 
+  color: red;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  background-color: lightcoral; /* Light red background */
+  color: white; /* White text */
+ 
+}
+/* Logo styles */
+.logo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Navigation menu styles */
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline; /* Adjusted to align items to the top */
+  padding: 20px;
+  margin-top: 100px;
+  
+}
+
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Logout button styles */
+.logout button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px; /* Adjust this value to control the vertical position */
+  left: 40px; /* Adjust this value if needed */
+}
+.logout :hover{
+  transform: scale(1.05); 
+
+}
+
+
+/* MovieDetails styles */
+.movie-details {
+  padding: 20px;
+}
+#trailer{
+  width: 100%;
+  height: 70vh;
+  border: 1px solid transparent;
+  border-radius: 5%;
+}
+
+.movie-trailer {
+  border-radius: 10%;
+   /* 35% of the viewport height */
+  /* Add styling for the movie trailer here */
+}
+
+.movie-info h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.movie-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.overview {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.director,
+.writer,
+.stars {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.inline{
+  display: flex;
+  word-spacing: 2px;
+  font-weight: bold;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.movie-poster-container {
+  position: relative;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px; /* Adjust this value to position the button vertically */
+  right: 20px; /* Adjust this value to position the button horizontally */
+  background-color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 5%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+.favorite-button.favorite {
+  color: blue;
+}
+#extra-details{
+  color:brown;
+}
+
+.link-box {
+  /* Styling for the box beneath the link */
+  border-radius: 10%; /* Border radius */
+  border: 5px solid transparent; /* Transparent border */
+  height: 15px; /* Adjust height as needed */
+  width: 100%; /* Full width of the sidebar */
+  margin: 5px 0; /* Space between links and boxes */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh;
+    background-size: 100% 100vh; /* Full height background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-details {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    width: 50%;
+  }
+  .featured-movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    margin: 0 5px;
+  }
+
+.movie-card{
+  width: 100%; /* Make the cards take the full width of the viewport */ 
+  margin: 10px 0;
+  padding:2px 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 }
