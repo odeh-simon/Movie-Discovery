@@ -17,15 +17,16 @@ function MovieCard({ movie }) {
       <div className="movie-card" data-testid="movie-card">
         <div className="movie-poster-container">
           <img src={movie.poster} alt={movie.title} data-testid="movie-poster" />
-          <p data-testid="movie-release-date">{movie.release_date}</p>
-          <h2 data-testid="movie-title">{movie.title}</h2>
-          <button
+     <button
             className="favorite-button"
             onClick={(e) => handleFavoriteClick(e)}
             style={{ color: isBlue ? 'orange' : 'red' }}
           >
             <FontAwesomeIcon icon={faHeart} />
           </button>
+          <p data-testid="movie-release-date">{movie.release_date}</p>
+          <h2 data-testid="movie-title">{movie.title}</h2>
+       
         </div>
       </div>
     </Link>
