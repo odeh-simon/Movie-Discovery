@@ -323,7 +323,7 @@ li:hover a {
 .favorite-button {
   position: absolute;
   top: 10px; /* Adjust this value to position the button vertically */
-  right: 50px; /* Adjust this value to position the button horizontally */
+  right: 60px; /* Adjust this value to position the button horizontally */
   background-color: white;
   border-radius: 50%;
   width: 25px;
