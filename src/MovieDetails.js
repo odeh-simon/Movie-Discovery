@@ -34,7 +34,7 @@ function MovieDetails() {
     <div>    <div className="movie-details-container">
       {/* Sidebar */}
       <div className="sidebar">
-        <div className="logo">Your Logo</div>
+        <div className="logo"><img src="C:\Users\Poundz's PC\Desktop\movie-discovery-app\public\Images\tv.svg" alt="logo" /></div>
         <div className="menu">
           <ul>
             <li>
