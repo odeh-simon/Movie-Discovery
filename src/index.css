@@ -145,8 +145,8 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Five movies per row */
   justify-content: center; /* Center the grid horizontally */
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   transition: transform 0.2s ease;
 }
 
