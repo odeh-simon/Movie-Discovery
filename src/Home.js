@@ -53,7 +53,7 @@ function Home() {
           <div>
             <img
               className="logo"
-              src="{logoImage}"
+              src={logoImage}
               alt="Website Logo"
             /><span>MovieBox</span>
             <div  className="hero-details">
