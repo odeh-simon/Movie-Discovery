@@ -71,7 +71,7 @@ function MovieDetails() {
           </ul>
         </div>
        
-        <div className="logout">
+        <div className="details-logout">
         <span className='logout-icon'> <FontAwesomeIcon icon={faSignOutAlt} /></span>
         <button>  
          
