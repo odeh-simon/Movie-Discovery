@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function MovieCard({ movie }) {
-  const [isBlue, setIsBlue] = useState(false);
+  const [isRed, setIsRed] = useState(false);
 
   const handleFavoriteClick = (e) => {
     e.stopPropagation(); // Prevent the click from propagating to the parent div
-    setIsBlue(!isBlue);
+    setIsRed(!isRed);
   };
 
   return (
@@ -20,7 +20,7 @@ function MovieCard({ movie }) {
      <button
             className="favorite-button"
             onClick={(e) => handleFavoriteClick(e)}
-            style={{ color: isBlue ? 'orange' : 'red' }}
+            style={{ color: isRed ? 'red' : 'white' }}
           >
             <FontAwesomeIcon icon={faHeart} />
           </button>
