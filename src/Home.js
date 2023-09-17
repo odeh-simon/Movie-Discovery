@@ -52,9 +52,9 @@ function Home() {
           <div>
             <img
               className="logo"
-              src="/public/Images/tv.svg"
+              src="tv.svg"
               alt="Website Logo"
-            />
+            /><span>MovieBox</span>
             <div  className="hero-details">
             <h1 className='hero-title' style={{fontSize:50}}>{topRatedMovies[0].title}</h1>
            
