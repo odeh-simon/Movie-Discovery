@@ -337,7 +337,7 @@ li:hover a {
 .favorite-button {
   position: absolute;
   top: 10px; /* Adjust this value to position the button vertically */
-  right: 30px; /* Adjust this value to position the button horizontally */
+  right: 60px; /* Adjust this value to position the button horizontally */
   background-color: #333;
   border-radius: 50%;
   width: 25px;
@@ -434,5 +434,18 @@ li:hover a {
 }
 .inline{
   font-size: small;
+}
+  .favorite-button {
+  position: absolute;
+  top: 10px; /* Adjust this value to position the button vertically */
+  right: 30px; /* Adjust this value to position the button horizontally */
+  background-color: #333;
+  border-radius: 50%;
+  width: 25px;
+  height: 5%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
 }
 }
