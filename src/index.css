@@ -218,6 +218,9 @@ li:hover a {
   margin-left: 10px;
 
 }
+.detail-logo{
+  margin-top: 10px;
+}
 
 /* Navigation menu styles */
 .menu {
@@ -334,8 +337,8 @@ li:hover a {
 .favorite-button {
   position: absolute;
   top: 10px; /* Adjust this value to position the button vertically */
-  right: 60px; /* Adjust this value to position the button horizontally */
-  background-color: white;
+  right: 30px; /* Adjust this value to position the button horizontally */
+  background-color: #333;
   border-radius: 50%;
   width: 25px;
   height: 5%;
@@ -395,5 +398,41 @@ li:hover a {
   padding:2px 0;
   margin-left: 0;
   margin-right: 0;
+}
+
+  .movie-details {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-basis: 15%; /* Reduce the sidebar width for icons only */
+    height: auto;
+  }
+
+  .movie-content {
+    flex-basis: 85%; /* Increase the movie content width */
+  }
+
+  /* Hide link texts and show only icons */
+  .sidebar a{
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 20px;
+  }
+
+  .logout-button {
+    display: none;
+   
+  }
+  .logout-icon{
+    display: block;
+    margin-bottom: 10px;
+  
+  }
+.icon{
+  display: block;
+}
+.inline{
+  font-size: small;
 }
 }

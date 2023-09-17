@@ -3,6 +3,8 @@ import axios from 'axios';
 import {useParams } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer';
+import logoImage from './tv.svg';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
@@ -51,9 +53,7 @@ function MovieDetails() {
     <div>    <div className="movie-details-container">
       {/* Sidebar */}
       <div className="sidebar">
-         <img className="logo"
-              src="tv.svg"
-              alt="Website Logo" />
+        <img src={logoImage} alt='logo' className='detail-logo' />
         <div className="menu">
           <ul>
             <li>
@@ -72,7 +72,10 @@ function MovieDetails() {
         </div>
        
         <div className="logout">
-          <button>Logout</button>
+        <span className='logout-icon'> <FontAwesomeIcon icon={faSignOutAlt} /></span>
+        <button className='logout-button'>  
+         
+ Logout</button>
         </div>
         
       </div>

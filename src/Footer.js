@@ -7,7 +7,7 @@ function Footer() {
       <div className="social-media-icons">
         {/* Add your social media icons and links here */}
         <a href="https://web.facebook.com/simon.odeh.587" className="social-icon">
-          <i className="fa fa-facebook"></i>
+  
         </a>
         <a href="https://web.facebook.com/simon.odeh.587" className="social-icon">
           <i className="fa fa-twitter"></i>
