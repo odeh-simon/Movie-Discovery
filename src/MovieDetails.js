@@ -3,12 +3,19 @@ import axios from 'axios';
 import {useParams } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHome,
+  faFilm,
+  faTv,
+  faCalendarAlt,
+  faSignOutAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 
 function MovieDetails() {
   const [movie, setMovie] = useState(null);
   const { movie_id } = useParams();
-
  
 
   useEffect(() => {
@@ -30,33 +37,45 @@ function MovieDetails() {
     return <div>Loading...</div>;
   }
 
+  const releaseDate = new Date(movie.release_date);
+  const releaseDateUTC = releaseDate.toUTCString();
+
+  // Format runtime to hours and minutes
+  const runtimeInMinutes = movie.runtime;
+  const hours = Math.floor(runtimeInMinutes / 60);
+  const minutes = runtimeInMinutes % 60;
+  const formattedRuntime = `${hours}h ${minutes}m`;
+
+
   return (
     <div>    <div className="movie-details-container">
       {/* Sidebar */}
       <div className="sidebar">
-        <div className="logo">Your Logo</div>
+         <img className="logo"
+              src="tv.svg"
+              alt="Website Logo" />
         <div className="menu">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/">  <FontAwesomeIcon icon={faHome} className='icon' /> Home</a>
+            </li>
+            <li>  
+              <a href="movie"> <FontAwesomeIcon icon={faFilm} className='icon' />Movies</a>
             </li>
             <li>
-              <a href="movie">Movies</a>
+              <a href="/tv-series"> <FontAwesomeIcon icon={faTv} className='icon' /> TV Series</a>
             </li>
-            <li>
-              <a href="/tv-series">TV Series</a>
-            </li>
-            <li>
-              <a href="/upcoming">Upcoming</a>
-            </li>
-            <li>
-              <a href="/all">All</a>
+            <li>  
+              <a href="/upcoming"><FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Upcoming</a>
             </li>
           </ul>
         </div>
        
         <div className="logout">
-          <button>Logout</button>
+        <span className='logout-icon'> <FontAwesomeIcon icon={faSignOutAlt} /></span>
+        <button>  
+         
+ Logout</button>
         </div>
         
       </div>
@@ -69,8 +88,8 @@ function MovieDetails() {
         <div className="movie-info">
           <div className='inline'>
           <span data-testid= "movie-title">{movie.title} | </span> 
-           <span data-testid= "movie-release-date"> | {movie.release_date} | </span>
-          <span data-testid= "movie-runtime"> | {movie.runtime }min </span>
+           <span data-testid= "movie-release-date"> | {releaseDateUTC} | </span>
+          <span data-testid= "movie-runtime"> |  {formattedRuntime} </span>
         
           </div>
           <div className="overview" data-testid= "movie-overview">{movie.overview}</div>
