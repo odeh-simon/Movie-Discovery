@@ -131,7 +131,7 @@ img {
 
 .search-bar {
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 50%;
   right: 0%;
   transform: translateX(-50%);
@@ -143,7 +143,7 @@ img {
 /* Style the container for featured movies */
 .featured-movies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Five movies per row */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Five movies per row */
   justify-content: center; /* Center the grid horizontally */
   margin-left: 5%;
   margin-right: 5%;
@@ -189,6 +189,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   
 }
 
@@ -196,7 +197,7 @@ img {
   /* Basic link styles */
   text-decoration: none;
   color: #333;
-  margin: 10px 0; /* Space the links neatly from each other */
+  margin: 20px 0; /* Space the links neatly from each other */
 
   /* Center the text within the link */
   display: flex;
@@ -213,8 +214,9 @@ li:hover a {
 }
 /* Logo styles */
 .logo {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 0px;
+  margin-left: 10px;
+
 }
 
 /* Navigation menu styles */
@@ -259,6 +261,15 @@ li:hover a {
 .logout :hover{
   transform: scale(1.05); 
 
+}
+
+.logout-icon{
+  display: none;
+
+}
+
+.icon{
+  display:none;
 }
 
 
@@ -323,8 +334,8 @@ li:hover a {
 .favorite-button {
   position: absolute;
   top: 10px; /* Adjust this value to position the button vertically */
-  right: 60px; /* Adjust this value to position the button horizontally */
-  background-color: white;
+  right: 30px; /* Adjust this value to position the button horizontally */
+  background-color: #333;
   border-radius: 50%;
   width: 25px;
   height: 5%;
@@ -384,5 +395,38 @@ li:hover a {
   padding:2px 0;
   margin-left: 0;
   margin-right: 0;
+}
+
+  .movie-details {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-basis: 15%; /* Reduce the sidebar width for icons only */
+  }
+
+  .movie-content {
+    flex-basis: 85%; /* Increase the movie content width */
+  }
+
+  /* Hide link texts and show only icons */
+  .sidebar a, button {
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 20px;
+  }
+
+  .logout button {
+    display: none;
+   
+  }
+  .logout-icon{
+    display: block;
+}
+.icon{
+  display: block;
+}
+.inline{
+  font-size: x-small;
 }
 }
