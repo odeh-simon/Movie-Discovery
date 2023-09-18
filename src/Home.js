@@ -55,7 +55,7 @@ function Home() {
               className="logo"
               src={logoImage}
               alt="Website Logo"
-            /><span>MovieBox</span>
+            />
             <div  className="hero-details">
             <h1 className='hero-title' style={{fontSize:50}}>{topRatedMovies[0].title}</h1>
            
