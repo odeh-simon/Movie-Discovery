@@ -20,7 +20,7 @@ img {
 .hero-section {
   position: relative;
   width: 100%;
- height: 90vh;
+ height: 100vh;
   background-image: url('/public/Images/Godfather.jpg'); 
   background-size: cover;
   background-position: center center;
@@ -99,7 +99,7 @@ img {
 
 .watch-trailer-button {
   display: inline-block;
-  background-color: red; 
+  background-color: rgb(225,10,50); 
   color: white;
   font-weight: bold;
   padding: 10px 20px;
@@ -117,8 +117,9 @@ img {
 }
 
 #search-box{
-  width: 100%;
+  width: 70%;
   padding: 10px;
+  color: transparent;
   
 }
 
@@ -132,7 +133,7 @@ img {
 .search-bar {
   position: absolute;
   top: 15px;
-  left: 50%;
+  left: 60%;
   right: 0%;
   transform: translateX(-50%);
   border: 0px; 
@@ -143,7 +144,7 @@ img {
 /* Style the container for featured movies */
 .featured-movies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Five movies per row */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Five movies per row */
   justify-content: center; /* Center the grid horizontally */
   margin-left: 2%;
   margin-right: 2%;
@@ -152,9 +153,11 @@ img {
 
 /* Adjust the styling for individual movie cards as needed */
 .movie-card {
-  text-align:left;
-  width: 100%; 
+  text-align:center;
+  width: 98%; 
   transition: transform 0.2s ease; /* Smooth zoom transition */
+  line-height: 0.3rem;
+  padding-bottom: 10%;
   
 }
 
@@ -189,7 +192,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-right: 0px;
+  margin-right: 10px;
 
   
 }
@@ -279,13 +282,14 @@ li:hover a {
 
 /* MovieDetails styles */
 .movie-details {
-  padding: 10px;
+  padding:1% 2%;
 }
+
 #trailer{
-  width: 100%;
+  width: 100vw;
   height: 70vh;
   border: 1px solid transparent;
-  border-radius: 5%;
+  border-radius: 3%;
 }
 
 .movie-trailer {
@@ -459,7 +463,7 @@ li:hover a {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 25px;
-  color: #ff0000;
+  color: rgb(225,29,72);
 }
 
 .hero-details p {

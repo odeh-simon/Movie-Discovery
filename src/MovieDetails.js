@@ -83,7 +83,8 @@ function MovieDetails() {
       {/* Movie Details */}
      
       <div className="movie-details">
-      <div className="movie-trailer"> <img id='trailer' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} data-testid="movie-poster" />
+      <div className="movie-trailer"> 
+      <img id='trailer' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} data-testid="movie-poster" />
         </div>
         <div className="movie-info">
           <div className='inline'>
