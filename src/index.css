@@ -126,7 +126,7 @@ img {
   position: absolute;
   top: 10px;
   left: 10px;
-  max-width: 100px; /* Adjust the logo size as needed */
+  max-width: 100px; 
 }
 
 .search-bar {
@@ -143,10 +143,10 @@ img {
 /* Style the container for featured movies */
 .featured-movies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Five movies per row */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Five movies per row */
   justify-content: center; /* Center the grid horizontally */
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   transition: transform 0.2s ease;
 }
 
