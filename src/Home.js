@@ -4,6 +4,7 @@ import MovieCard from './MovieCard';  // Import the MovieCard component
 import Search from './Search';        // Import the Search component
 import Error from './Error';          // Import the Error component
 import Footer from './Footer';
+import logoImage from './tv.svg';
 import './App.css';
 
 
@@ -52,9 +53,9 @@ function Home() {
           <div>
             <img
               className="logo"
-              src="tv.svg"
+              src={logoImage}
               alt="Website Logo"
-            /><span>MovieBox</span>
+            />  
             <div  className="hero-details">
             <h1 className='hero-title' style={{fontSize:50}}>{topRatedMovies[0].title}</h1>
            
