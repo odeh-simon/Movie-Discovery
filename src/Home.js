@@ -5,7 +5,6 @@ import Search from './Search';        // Import the Search component
 import Error from './Error';          // Import the Error component
 import Footer from './Footer';
 import logoImage from './tv.svg';
-import logoImage from './tv.svg';
 import './App.css';
 
 
