@@ -189,7 +189,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 0px;
 
   
 }
@@ -435,7 +435,8 @@ li:hover a {
   display: block;
 }
 .inline{
-  font-size: x-small;
+  width: 100%;
+  font-size: xx-small;
 }
 
 .watch-trailer-button {
