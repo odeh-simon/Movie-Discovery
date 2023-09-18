@@ -55,7 +55,6 @@ function Home() {
             <img
               className="logo"
               src={logoImage}
-              src={logoImage}
               alt="Website Logo"
             />  
             <div  className="hero-details">
