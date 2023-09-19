@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  transition: all 2s ease-in;
 }
 
 code {
@@ -162,6 +162,7 @@ img {
 }
 
 .movie-card :hover {
+  transition: all 0.3s ease-in;
   transform: scale(1.02); 
 }
 /* Target only the movie titles within .movie-card */
