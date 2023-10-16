@@ -104,7 +104,7 @@ img {
   font-weight: bold;
   padding: 10px 20px;
   border: none;
-  width: 25%;
+  width: 10%;
   text-align: center;
   cursor: pointer;
   margin-top: 10px;
@@ -113,14 +113,36 @@ img {
   left: 5%; /* Adjust left positioning as needed */
   transform: translateY(-50%);
   border: 1px ;
-  border-radius: 15%;
+  border-radius: 2%;
 }
 
 #search-box{
   width: 70%;
   padding: 10px;
-  color: transparent;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgb(225,10,50);
+  border-radius:2%;
   
+}
+
+.search-modal {
+  background: white;
+  max-height: 200px; 
+  width:73%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc;
+}
+
+.search-results {
+  color: black;
+}
+
+.search-link{
+  text-decoration:none;
+  color:#000;
+  padding-left:1px;
+ 
 }
 
 .logo {

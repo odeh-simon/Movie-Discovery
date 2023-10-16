@@ -6,6 +6,9 @@ import Error from './Error';          // Import the Error component
 import Footer from './Footer';
 import logoImage from './tv.svg';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 
 // ... Existing imports and code ...
@@ -19,6 +22,7 @@ function Home() {
     const baseUrl = 'https://api.themoviedb.org/3';
     const endpoint = '/movie/top_rated';
     const queryParams = `?api_key=${apiKey}&language=en-US&page=1`;
+    
 
     const apiUrl = baseUrl + endpoint + queryParams;
 
@@ -71,8 +75,8 @@ function Home() {
           </div>
         )}
         <div className="search-bar">
-          <Search />
-          
+          <Search  />
+          <FontAwesomeIcon icon={faSearch} />
         </div>
        
       </section>
