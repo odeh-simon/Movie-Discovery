@@ -682,9 +682,9 @@ line-height: normal;
   width: 30%;
   text-align: center;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 10px;
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 5%; /* Adjust left positioning as needed */
   transform: translateY(-50%);
   border-radius: 4%;
