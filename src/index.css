@@ -101,10 +101,11 @@ img {
   display: inline-block;
   background-color: rgb(225,10,50); 
   color: white;
+  font-size:1.1rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
-  width: 10%;
+  width: 20%;
   text-align: center;
   cursor: pointer;
   margin-top: 10px;
@@ -113,18 +114,10 @@ img {
   left: 5%; /* Adjust left positioning as needed */
   transform: translateY(-50%);
   border: 1px ;
-  border-radius: 2%;
+  border-radius: 4%;
 }
 
-#search-box{
-  width: 70%;
-  padding: 10px;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid rgb(225,10,50);
-  border-radius:2%;
-  
-}
+
 
 .search-modal {
   background: white;
@@ -145,12 +138,31 @@ img {
  
 }
 
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  max-width: 100px; 
+.search-input {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding: 5px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgb(225,10,50);
+  border-radius:2%;
 }
+
+.search-input input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px;
+  color:white;
+  background-color: transparent;
+}
+
+.searchicon{
+  color:white;
+  padding:5px;
+}
+
 
 .search-bar {
   position: absolute;
@@ -203,11 +215,12 @@ img {
 /* Sidebar styles */
 .sidebar {
   position: static;
-  width: 10%;
-  height: 100vh;
-  background-color: #f0f0f0;
-  border-right: 1px solid #ccc;
-  border-radius: 10px;
+  width: 226px;
+  height: 982px;
+  flex-shrink: 0;
+  border-radius: 0px 45px 45px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  background: #FFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -229,32 +242,66 @@ img {
   align-items: center;
 }
 
-li:hover a {
-  transform: scale(1.05); 
-  color: red;
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-  background-color: lightcoral; /* Light red background */
-  color: white; /* White text */
- 
-}
+
 /* Logo styles */
+
 .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 100px; 
+}
+
+
+.homelogo {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  max-width: 100px;
   margin-top: 0px;
-  margin-left: 4%;
+  margin-left: 5%;
+  display:flex;
+  align-items:center;
+  padding-top:10px;
+  gap:10px;
 
 }
-.detail-logo{
+
+.homelogotitle{
+  color: #fff;
+  font-family: monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  }
+
+.logocontainer{
   margin-top: 10px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+
+.logotitle{
+color: #333;
+font-family: monospace;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 100% */
 }
 
 /* Navigation menu styles */
 .menu {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: first baseline; /* Adjusted to align items to the top */
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 70px;
+
   
 }
 
@@ -274,17 +321,92 @@ li:hover a {
   font-weight: bold;
 }
 
+.icon{
+  display:flex;
+  padding-right:10px;
+}
+
+.flex-menu{
+  display:flex;
+  flex-direction:row;
+  gap:5px;
+  padding:5px 20px;
+  
+}
+
+li:hover a {
+  transform: scale(1.05); 
+  color: #BE123C;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+ 
+}
+
+.flex-menu:hover{
+  background: rgba(190, 18, 60, 0.10);
+  padding:5px 20px;
+  border-right:5px solid #BE123C;
+  width:98%;
+}
+.sidebarbox{
+width: 170px;
+height: 210px;
+border-radius: 20px;
+border: 1px solid rgba(190, 18, 60, 0.70);
+background: rgba(248, 231, 235, 0.40);
+margin-bottom:100%;
+padding:10px;
+font-family:monospace;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.sidebarbox button{
+color: #BE123C;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 112px;
+height: 30px;
+border-radius: 30px;
+background: rgba(190, 18, 60, 0.20);
+border:none;
+cursor:pointer;
+margin-top:10px;
+}
+
+.sidebarbox p{
+  color: rgba(51, 51, 51, 0.80);
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding-top:15%;
+}
+
+.sidebarbox span{
+  color: #666;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
 /* Logout button styles */
 .logout button {
-  background-color: #ff0000;
+  background-color:#BE123C;
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  bottom: 20px; /* Adjust this value to control the vertical position */
-  left: 20px; /* Adjust this value if needed */
+  bottom: -60px; /* Adjust this value to control the vertical position */
+  left: 60px; /* Adjust this value if needed */
 }
 .logout :hover{
   transform: scale(1.05); 
@@ -296,9 +418,6 @@ li:hover a {
 
 }
 
-.icon{
-  display:none;
-}
 
 
 /* MovieDetails styles */
@@ -310,14 +429,9 @@ li:hover a {
   width: 100vw;
   height: 70vh;
   border: 1px solid transparent;
-  border-radius: 3%;
+  border-radius: 20px;
 }
 
-.movie-trailer {
-  border-radius: 10%;
-   /* 35% of the viewport height */
-  /* Add styling for the movie trailer here */
-}
 
 .movie-info h2 {
   font-size: 24px;
@@ -333,18 +447,20 @@ li:hover a {
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 70%;
+  width: 60%;
 }
 
 .details {
   margin-top: 20px;
 }
 
-.director,
-.writer,
-.stars {
+.moviecast {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
   font-size: 16px;
   margin-bottom: 10px;
+  padding-top:5px;
 }
 .inline{
   display: flex;
@@ -361,7 +477,7 @@ li:hover a {
   padding: 0;
   margin: 0;
   word-spacing: 0%;
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid black;
   border-bottom-right-radius: 2%;
   border-bottom-left-radius: 2%;
 
@@ -384,7 +500,7 @@ li:hover a {
   color: blue;
 }
 #extra-details{
-  color:brown;
+  color:#BE123C;
 }
 
 .link-box {
@@ -400,13 +516,49 @@ li:hover a {
 @media (max-width: 768px) {
   .hero-section {
     height: 100vh;
-    background-size: 100% 100vh; /* Full height background */
+    background-image: url('/public/Images/Godfathermobile.png'); 
+    background-size: cover; /* Full height background */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  .search-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgb(225,10,50);
+    border-radius:2%;
+  }
+  
+  .search-input input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    color:white;
+    background-color: transparent;
+  }
+  
+  .searchicon{
+    color:white;
+    padding:5px;
+  }
+
+  .search-bar {
+    position: absolute;
+    top: 15px;
+    left: 60%;
+    right: 0%;
+    transform: translateX(-50%);
+    border: 0px; 
+  
+  }
+  
   .hero-details {
     position: absolute;
     top: 40%;
@@ -440,6 +592,9 @@ li:hover a {
     height:auto;
   }
 
+  .sidebarbox{
+    display:none;
+  }
   .movie-content {
     flex-basis: 85%; /* Increase the movie content width */
   }
@@ -449,9 +604,24 @@ li:hover a {
     text-indent: -9999px;
     overflow: hidden;
     width: 20px;
-      /* Center the text within the link */
-  display: flex;
-  align-items:flex-start;
+    display: flex;
+    align-items:flex-start;
+  }
+
+  .flex-menu:hover{
+    background: rgba(190, 18, 60, 0.10);
+    padding:5px 20px;
+    border-right:5px solid #BE123C;;
+    width:66%;
+  }
+
+  .logotitle, .homelogotitle{
+    display:none;
+  }
+
+  .detail-logo{
+    width: 50px;
+    height: 50px;
   }
 
   .logout-button {
@@ -485,19 +655,104 @@ li:hover a {
   
 }
 .hero-details h1 {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 0.7rem;
+  font-weight: lighter;
   margin-bottom: 25px;
   color: rgb(225,29,72);
 }
 
 .hero-details p {
-  font-size: 0.7rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+ font-weight:semi-bold;
   margin: 5px 0;
+  color:#c3c3c3;
 }
 #trailer{
   height: 50vh;
 }
 
+.watch-trailer-button {
+  display: inline-block;
+  background-color: rgb(225,10,50); 
+  color: white;
+  font-size:1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 5px;
+  position: absolute;
+  top: 80%;
+  left: 5%; /* Adjust left positioning as needed */
+  transform: translateY(-50%);
+  border-radius: 4%;
 }
+
+}
+
+@media (min-width: 768px) and (max-width: 1155px) {
+  .hero-section {
+    position: relative;
+    width: 100%;
+   height: 100vh;
+    background-image: url('/public/Images/Godfathertab.png'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat:no-repeat;
+    margin-bottom: 5%;
+  
+  }
+
+  .hero-details p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .hero-details {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    width: 45%;
+  }
+
+  .watch-trailer-button {
+    display: inline-block;
+    background-color: rgb(225,10,50); 
+    color: white;
+    font-size:1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    margin-top:10px;
+    position: absolute;
+    top: 80%;
+    left: 5%; /* Adjust left positioning as needed */
+    transform: translateY(-50%);
+    border: 1px ;
+    border-radius: 4%;
+  }
+
+  .logout button {
+    background-color: #BE123C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -100px; /* Adjust this value to control the vertical position */
+    left: 60px; /* Adjust this value if needed */
+  }
+  
+  
+}
+

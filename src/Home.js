@@ -30,7 +30,7 @@ function Home() {
     axios.get(apiUrl)
       .then((response) => {
         // Handle the response data here
-        const topRatedMoviesData = response.data.results.slice(0, 11);
+        const topRatedMoviesData = response.data.results.slice(0, 21);
         const baseImageUrl = 'https://image.tmdb.org/t/p/w300/';
 
         // Update the poster_path for each movie with the complete URL
@@ -55,11 +55,10 @@ function Home() {
       <section className="hero-section">
         {topRatedMovies.length > 0 && (
           <div>
-            <img
-              className="logo"
-              src={logoImage}
-              alt="Website Logo"
-            />  
+             <div className='homelogo'>  
+            <img  src={logoImage} alt="Website Logo" />  
+               <span className='homelogotitle'>MovieBox</span>
+               </div>
             <div  className="hero-details">
             <h1 className='hero-title' style={{fontSize:50}}>{topRatedMovies[0].title}</h1>
            

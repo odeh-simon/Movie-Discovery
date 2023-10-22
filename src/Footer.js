@@ -25,7 +25,7 @@ function Footer() {
         <a href="https://web.facebook.com/simon.odeh.587">Press Room</a>
       </div>
       <div className="copyright">
-        &copy; {new Date().getFullYear()} Simon Odeh. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Poundz. All Rights Reserved.
       </div>
     </footer>
   );

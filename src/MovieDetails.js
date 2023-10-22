@@ -53,29 +53,38 @@ function MovieDetails() {
     <div>    <div className="movie-details-container">
       {/* Sidebar */}
       <div className="sidebar">
-        <img src={logoImage} alt='logo' className='detail-logo' />
+        <div className='logocontainer'>        <img src={logoImage} alt='logo' className='detail-logo' />
+         <span className='logotitle'>MovieBox</span>
+        </div>
+  
         <div className="menu">
           <ul>
-            <li>
+            <li className='flex-menu'>
               <a href="/">  <FontAwesomeIcon icon={faHome} className='icon' /> Home</a>
             </li>
-            <li>  
+            <li className='flex-menu'>  
               <a href="movie"> <FontAwesomeIcon icon={faFilm} className='icon' />Movies</a>
             </li>
-            <li>
+            <li className='flex-menu'>
               <a href="/tv-series"> <FontAwesomeIcon icon={faTv} className='icon' /> TV Series</a>
             </li>
-            <li>  
+            <li className='flex-menu'>  
               <a href="/upcoming"><FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Upcoming</a>
             </li>
           </ul>
-        </div>
+
+          
+          </div>
+
+          <div className='sidebarbox'>
+            <p style={{fontWeight:'bold'}}>play movie quizes and earn Free tickets</p>
+            <span>50k people are playing now</span> <br />
+            <button>Start Playing</button>
+          </div>
        
         <div className="logout">
         <span className='logout-icon'> <FontAwesomeIcon icon={faSignOutAlt} /></span>
-        <button className='logout-button'>  
-         
- Logout</button>
+        <button className='logout-button'>  Logout</button>
         </div>
         
       </div>
@@ -94,10 +103,11 @@ function MovieDetails() {
         
           </div>
           <div className="overview" data-testid= "movie-overview">{movie.overview}</div>
+          <div className='moviecast'>
           <div >Driector: <span id='extra-details'> Joseph Kosinski</span> </div>
           <div>Writers: <span id='extra-details'> Jim Cash, Jack Epps Jr, Peter Craig</span> </div>
           <div>Stars: <span id='extra-details'> Tom Cruise, Jennifer Connelly, Miles Teller</span></div>
-          
+          </div>
         </div>
        
       </div>
