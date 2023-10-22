@@ -12,8 +12,8 @@ function Search() {
   const [error, setError] = useState(null);
   const searchModalRef = useRef(null);
 
-  const handleSearch = async () => {
-    if (searchQuery === '') {
+  const handleSearch = async (query) => {
+    if (query === '') {
       setSearchResults([]);
       return;
     }
@@ -23,7 +23,7 @@ function Search() {
     try {
       const apiKey = '0dcbc831d0a9d8f6f721c7f83e9c4be8';
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=${apiKey}`
+        `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${apiKey}`
       );
 
       if (!response.ok) {
@@ -61,17 +61,16 @@ function Search() {
           type="text"
           placeholder="Enter a movie title..."
           value={searchQuery}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              handleSearch();
-            }
+          onChange={(e) => {
+            const query = e.target.value;
+            setSearchQuery(query);
+            handleSearch(query); // Trigger search as the user types
           }}
-          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <FontAwesomeIcon
           icon={faSearch}
           className="searchicon"
-          onClick={handleSearch}
+          onClick={() => handleSearch(searchQuery)}
         />
       </div>
       {isLoading && <p>Loading...</p>}
