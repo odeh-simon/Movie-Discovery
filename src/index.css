@@ -623,7 +623,7 @@ line-height: normal;
     display: flex;
     flex-direction:row;
     align-items:baseline; /* Adjusted to align items to the top */
-    padding: 15px;
+    padding: 1px;
     margin-top: 70px;
   
   }
@@ -646,7 +646,7 @@ line-height: normal;
   /* Hide link texts and show only icons */
   .sidebar a{
     color:white;
-    width: 30px;
+    width: 22px;
     display: flex;
     align-items:center;
   }
