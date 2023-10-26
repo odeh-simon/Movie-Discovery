@@ -623,7 +623,7 @@ line-height: normal;
     display: flex;
     flex-direction:row;
     align-items:baseline; /* Adjusted to align items to the top */
-    padding: 20px;
+    padding: 15px;
     margin-top: 70px;
   
   }
@@ -633,7 +633,6 @@ line-height: normal;
     align-items:center;
     position:relative;
     bottom:30px;
-    margin-left:2%;
   }
 
 
