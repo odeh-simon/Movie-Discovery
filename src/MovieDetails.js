@@ -60,16 +60,16 @@ function MovieDetails() {
         <div className="menu">
           <ul className='navbar'>
             <li className='flex-menu'>
-              <a href="/" title='home'>  <FontAwesomeIcon icon={faHome} className='icon' /> Home</a>
+              <a href="/" >  <FontAwesomeIcon icon={faHome} className='icon' /> Home</a>
             </li>
             <li className='flex-menu'>  
-              <a href="/" title='movies'> <FontAwesomeIcon icon={faFilm} className='icon' />Movies</a>
+              <a href="/" > <FontAwesomeIcon icon={faFilm} className='icon' />Movies</a>
             </li>
             <li className='flex-menu'>
-              <a href="/" title='series'> <FontAwesomeIcon icon={faTv} className='icon' />Series</a>
+              <a href="/" > <FontAwesomeIcon icon={faTv} className='icon' />Series</a>
             </li>
             <li className='flex-menu'>  
-              <a href="/" title='upcoming'><FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Upcoming</a>
+              <a href="/" ><FontAwesomeIcon icon={faCalendarAlt} className='icon' /> Upcoming</a>
             </li>
           </ul>
 
