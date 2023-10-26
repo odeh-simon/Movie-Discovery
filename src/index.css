@@ -527,7 +527,7 @@ line-height: normal;
   .search-input {
     display: flex;
     align-items: center;
-    width: 140%;
+    width: 120%;
     padding: 5px;
     background-color: transparent;
     color: #fff;
@@ -541,12 +541,15 @@ line-height: normal;
     flex-grow: 1;
     padding: 5px;
     color:white;
-    background-color: transparent;
+    background-color: black;
   }
   
   .searchicon{
-    color:white;
+    color:#BE123C;
     padding:2px;
+    position:absolute;
+    right:-35px;
+    z-index:100;
   }
 
   .search-bar {
@@ -587,9 +590,46 @@ line-height: normal;
     flex-direction: column;
   }
 
+  .movie-details-container {
+    display: flex;
+    flex-direction:column;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 5;
+   
+  }
+
   .sidebar {
-    flex-basis: 15%; 
-    height:auto;
+    background-color:#333;
+    width:100%;
+    height:60px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    border-radius:0;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction:row;
+    align-items:baseline; /* Adjusted to align items to the top */
+    padding: 20px;
+    margin-top: 70px;
+  
+  }
+
+  .navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    bottom:30px;
+  }
+
+  .flex-menu:hover{
+    background: rgba(190, 18, 60, 0.10);
+    padding:5px 20px;
+    border-right:5px solid #BE123C;
+    width:9%;
   }
 
   .sidebarbox{
@@ -601,19 +641,23 @@ line-height: normal;
 
   /* Hide link texts and show only icons */
   .sidebar a{
-    text-indent: -9999px;
-    overflow: hidden;
-    width: 20px;
+    color:white;
+    width: 30px;
     display: flex;
-    align-items:flex-start;
+    align-items:center;
   }
 
   .flex-menu:hover{
-    background: rgba(190, 18, 60, 0.10);
-    padding:5px 20px;
-    border-right:5px solid #BE123C;;
-    width:66%;
+    background:none;
+    border-right:0;
+    width:10%;
   }
+
+  li:hover a {
+    color: #BE123C;
+   
+  }
+  
 
   .logotitle, .homelogotitle{
     display:none;
@@ -621,7 +665,9 @@ line-height: normal;
 
   .detail-logo{
     width: 50px;
-    height: 50px;
+    height: 60px;
+    margin-bottom:15px;
+    margin-left:10px;
   }
 
   .logout-button {
@@ -629,16 +675,18 @@ line-height: normal;
    
   }
   .logout-icon{
+    color:white;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-right: 15px;
   
   }
 .icon{
-  display: block;
+  display: none;
 }
 .inline{
   width: 100%;
-  font-size:0.5rem;
+  font-size:0.8rem;
 }
 
 .watch-trailer-button {
@@ -669,6 +717,11 @@ line-height: normal;
 }
 #trailer{
   height: 50vh;
+}
+
+.overview{
+  text-align:left;
+  width:90%;
 }
 
 .watch-trailer-button {
