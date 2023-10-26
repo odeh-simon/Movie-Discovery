@@ -122,7 +122,7 @@ img {
 .search-modal {
   background: white;
   max-height: 200px; 
-  width:73%;
+  width:71.5%;
   overflow-y: auto; /* Enable vertical scrolling */
   border: 1px solid #ccc;
 }
@@ -561,6 +561,15 @@ line-height: normal;
     border: 0px; 
   
   }
+
+  .search-modal {
+    background: white;
+    max-height: 200px; 
+    width:125%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+  }
+  
   
   .hero-details {
     position: absolute;
