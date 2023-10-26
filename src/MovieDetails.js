@@ -39,8 +39,8 @@ function MovieDetails() {
     return <div>Loading...</div>;
   }
 
-  const releaseDate = new Date(movie.release_date);
-  const releaseDateUTC = releaseDate.toUTCString();
+ /*} const releaseDate = new Date(movie.release_date);
+const releaseDateUTC = releaseDate.toUTCString(); */
 
   // Format runtime to hours and minutes
   const runtimeInMinutes = movie.runtime;
@@ -98,7 +98,7 @@ function MovieDetails() {
         <div className="movie-info">
           <div className='inline'>
           <span data-testid= "movie-title">{movie.title} | </span> 
-           <span data-testid= "movie-release-date"> | {releaseDateUTC} | </span>
+           <span data-testid= "movie-release-date"> | {movie.release_date} | </span>
           <span data-testid= "movie-runtime"> |  {formattedRuntime} </span>
         
           </div>
